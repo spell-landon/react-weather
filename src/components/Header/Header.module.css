@@ -1,0 +1,41 @@
+nav {
+  display: flex;
+  align-items: center;
+  font-family: 'Pushster', cursive;
+  padding: 1rem;
+  background-color: rgb(22, 23, 23);
+}
+h1 {
+  position: fixed;
+  background: linear-gradient(45deg, rgb(155, 178, 253), rgb(245, 243, 122));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+form {
+  margin: 0 auto;
+}
+.search {
+  border: 1px solid rgb(206, 206, 206);
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+  max-width: 500px;
+  margin-right: 0.5rem;
+  background-color: rgb(22, 23, 23);
+  color: white;
+}
+.search:focus {
+  outline: none;
+}
+.searchBtn {
+  background-color: rgb(175, 207, 255);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  transition: all 0.2s ease-in-out;
+  color: black;
+  cursor: pointer;
+}
+.searchBtn:hover {
+    background-color: rgb(138, 185, 255);
+
+}
