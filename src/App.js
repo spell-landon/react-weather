@@ -3,11 +3,11 @@ import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import { useState, useEffect } from 'react';
 
-
 function App() {
   const [data, setData] = useState([]);
   const [searchString, setSearchString] = useState('');
   const [lastSearch, setLastSearch] = useState('');
+
   const searchOptions = {
     key: process.env.REACT_APP_WEATHER_KEY,
     api: `http://api.openweathermap.org/data/2.5/weather?q=${searchString}&units=imperial&appid=`,
@@ -27,7 +27,7 @@ function App() {
         setLastSearch(searchString);
         setSearchString('');
       })
-      .catch(console.error());
+      .catch(console.log(`Something went wrong...`));
   };
   function handleChange(e) {
     setSearchString(e.target.value);
@@ -36,7 +36,6 @@ function App() {
     e.preventDefault();
     getWeather(searchString);
   }
-
 
   return (
     <div className='App'>

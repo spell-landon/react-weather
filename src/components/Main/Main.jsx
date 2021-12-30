@@ -3,7 +3,7 @@ import styles from './Main.module.css';
 import Title from './Title/Title';
 import Card from './Card/Card';
 
-function Main({ data }) {
+function Main({ data}) {
   // Date
   var objToday = new Date(),
     domEnder = (function () {
@@ -45,7 +45,7 @@ function Main({ data }) {
   return (
     <div>
       <Title data={data} today={today} />
-      <Card/>
+      <Card data={data}/>
     </div>
   );
 }
